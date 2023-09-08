@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		D46DFBED2AAB375D00595627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46DFBEC2AAB375D00595627 /* AppDelegate.swift */; };
 		D46DFBEF2AAB375D00595627 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46DFBEE2AAB375D00595627 /* SceneDelegate.swift */; };
-		D46DFBF12AAB375D00595627 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46DFBF02AAB375D00595627 /* ViewController.swift */; };
-		D46DFBF42AAB375D00595627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46DFBF22AAB375D00595627 /* Main.storyboard */; };
 		D46DFBF72AAB375D00595627 /* Speech_To_Text.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D46DFBF52AAB375D00595627 /* Speech_To_Text.xcdatamodeld */; };
 		D46DFBF92AAB376000595627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D46DFBF82AAB376000595627 /* Assets.xcassets */; };
 		D46DFBFC2AAB376000595627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46DFBFA2AAB376000595627 /* LaunchScreen.storyboard */; };
@@ -40,8 +38,6 @@
 		D46DFBE92AAB375D00595627 /* Speech-To-Text.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speech-To-Text.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46DFBEC2AAB375D00595627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D46DFBEE2AAB375D00595627 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D46DFBF02AAB375D00595627 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D46DFBF32AAB375D00595627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D46DFBF62AAB375D00595627 /* Speech_To_Text.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Speech_To_Text.xcdatamodel; sourceTree = "<group>"; };
 		D46DFBF82AAB376000595627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D46DFBFB2AAB376000595627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -122,8 +118,6 @@
 			children = (
 				D45021842AAB3C8B00A3DAE4 /* Application */,
 				D45021862AAB3C9700A3DAE4 /* Resources */,
-				D46DFBF02AAB375D00595627 /* ViewController.swift */,
-				D46DFBF22AAB375D00595627 /* Main.storyboard */,
 				D46DFBF52AAB375D00595627 /* Speech_To_Text.xcdatamodeld */,
 			);
 			path = "Speech-To-Text";
@@ -252,7 +246,6 @@
 			files = (
 				D46DFBFC2AAB376000595627 /* LaunchScreen.storyboard in Resources */,
 				D46DFBF92AAB376000595627 /* Assets.xcassets in Resources */,
-				D46DFBF42AAB375D00595627 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +270,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D46DFBF12AAB375D00595627 /* ViewController.swift in Sources */,
 				D46DFBF72AAB375D00595627 /* Speech_To_Text.xcdatamodeld in Sources */,
 				D46DFBED2AAB375D00595627 /* AppDelegate.swift in Sources */,
 				D46DFBEF2AAB375D00595627 /* SceneDelegate.swift in Sources */,
@@ -317,14 +309,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D46DFBF22AAB375D00595627 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D46DFBF32AAB375D00595627 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D46DFBFA2AAB376000595627 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -462,7 +446,6 @@
 				INFOPLIST_FILE = "Speech-To-Text/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -490,7 +473,6 @@
 				INFOPLIST_FILE = "Speech-To-Text/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
