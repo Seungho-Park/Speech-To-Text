@@ -43,6 +43,7 @@
 		D480274E2AAD1C23008E3A9E /* ViewModelBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480274D2AAD1C23008E3A9E /* ViewModelBindable.swift */; };
 		D48027512AAD2168008E3A9E /* TransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48027502AAD2168008E3A9E /* TransitionType.swift */; };
 		D48027532AAD2182008E3A9E /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48027522AAD2182008E3A9E /* Scene.swift */; };
+		D48027582AAD2531008E3A9E /* SpeechRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48027432AAD183A008E3A9E /* SpeechRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -313,6 +314,7 @@
 		D46DFC052AAB376100595627 /* Speech-To-TextTests */ = {
 			isa = PBXGroup;
 			children = (
+				D48027542AAD24B4008E3A9E /* Domain */,
 				D45021B92AACF68600A3DAE4 /* Speech */,
 				D46DFC062AAB376100595627 /* Speech_To_TextTests.swift */,
 			);
@@ -368,6 +370,21 @@
 				D48027522AAD2182008E3A9E /* Scene.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D48027542AAD24B4008E3A9E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D48027552AAD24DD008E3A9E /* Usecase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D48027552AAD24DD008E3A9E /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Usecase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -535,6 +552,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D48027582AAD2531008E3A9E /* SpeechRepository.swift in Sources */,
 				D45021BD2AACF6B400A3DAE4 /* SpeechServiceError.swift in Sources */,
 				D45021BE2AACF6B400A3DAE4 /* SpeechRecognizerError.swift in Sources */,
 				D45021BF2AACF6B400A3DAE4 /* SpeechConfig.swift in Sources */,

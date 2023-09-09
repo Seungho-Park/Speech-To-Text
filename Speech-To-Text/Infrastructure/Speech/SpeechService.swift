@@ -20,14 +20,14 @@ class DefaultSpeechService {
     private let recognizer: SpeechRecognizer
     
     private var engine: AVAudioEngine? = nil
-    private var task: SFSpeechRecognitionTask? = nil
+    private var task: SFSpeechRecognitionTask? = nil {
+        willSet {
+            stopRecording()
+        }
+    }
     
     init(recognizer: SpeechRecognizer) {
         self.recognizer = recognizer
-    }
-    
-    private func start() {
-        
     }
 }
 
@@ -36,7 +36,6 @@ extension DefaultSpeechService: SpeechService {
     func startRecording(request: SpeechRequestable, completion: @escaping CompletionHandler) {
         do {
             let request = try request.request()
-            self.engine = request.engine
             task = recognizer.recognitionTask(with: request.request) { [weak self] string, error in
                 if let error = error {
                     if case SpeechRecognizerError.complete(let err) = error {
@@ -54,6 +53,8 @@ extension DefaultSpeechService: SpeechService {
                 
                 completion(.success(string ?? ""))
             }
+            
+            self.engine = request.engine
         } catch let error {
             completion(.failure(.request(error: error)))
         }
