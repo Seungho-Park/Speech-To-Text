@@ -12,11 +12,11 @@ import AVFoundation
 protocol SpeechRequestable {
     var shouldReportPartialResults: Bool { get }
     
-    func request(locale: Locale) throws -> (engine: AVAudioEngine, request: SFSpeechRecognitionRequest)
+    func request() throws -> (engine: AVAudioEngine, request: SFSpeechRecognitionRequest)
 }
 
 extension SpeechRequestable {    
-    func request(locale: Locale) throws -> (engine: AVAudioEngine, request: SFSpeechRecognitionRequest) {
+    func request() throws -> (engine: AVAudioEngine, request: SFSpeechRecognitionRequest) {
         let engine = AVAudioEngine()
         
         let request = SFSpeechAudioBufferRecognitionRequest()

@@ -35,7 +35,7 @@ class DefaultSpeechService {
 extension DefaultSpeechService: SpeechService {
     func startRecording(request: SpeechRequestable, completion: @escaping CompletionHandler) {
         do {
-            let request = try request.request(locale: .current)
+            let request = try request.request()
             self.engine = request.engine
             task = recognizer.recognitionTask(with: request.request) { [weak self] string, error in
                 if let error = error {
