@@ -24,7 +24,7 @@ extension ViewModelBindable where Self: UIViewController {
         bind()
     }
     
-    func create(viewModel: ViewModelType)-> Self {
+    static func create(viewModel: ViewModelType)-> Self {
         var vc = Self.init()
         vc.bindViewModel(viewModel: viewModel)
         

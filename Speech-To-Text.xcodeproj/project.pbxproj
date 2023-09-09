@@ -41,6 +41,8 @@
 		D48027482AAD1A92008E3A9E /* SplashUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48027472AAD1A92008E3A9E /* SplashUsecase.swift */; };
 		D480274C2AAD1BF5008E3A9E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480274B2AAD1BF5008E3A9E /* BaseViewController.swift */; };
 		D480274E2AAD1C23008E3A9E /* ViewModelBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480274D2AAD1C23008E3A9E /* ViewModelBindable.swift */; };
+		D48027512AAD2168008E3A9E /* TransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48027502AAD2168008E3A9E /* TransitionType.swift */; };
+		D48027532AAD2182008E3A9E /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48027522AAD2182008E3A9E /* Scene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		D48027472AAD1A92008E3A9E /* SplashUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUsecase.swift; sourceTree = "<group>"; };
 		D480274B2AAD1BF5008E3A9E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D480274D2AAD1C23008E3A9E /* ViewModelBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindable.swift; sourceTree = "<group>"; };
+		D48027502AAD2168008E3A9E /* TransitionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionType.swift; sourceTree = "<group>"; };
+		D48027522AAD2182008E3A9E /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,7 +217,7 @@
 			children = (
 				D48027492AAD1BE5008E3A9E /* ViewModel */,
 				D480274A2AAD1BEB008E3A9E /* View */,
-				D480274D2AAD1C23008E3A9E /* ViewModelBindable.swift */,
+				D480274F2AAD214F008E3A9E /* Utils */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -354,6 +358,16 @@
 				D480274B2AAD1BF5008E3A9E /* BaseViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D480274F2AAD214F008E3A9E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D480274D2AAD1C23008E3A9E /* ViewModelBindable.swift */,
+				D48027502AAD2168008E3A9E /* TransitionType.swift */,
+				D48027522AAD2182008E3A9E /* Scene.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,7 +518,9 @@
 				D45021A62AAC964200A3DAE4 /* AppDIContainer.swift in Sources */,
 				D46DFBED2AAB375D00595627 /* AppDelegate.swift in Sources */,
 				D45021B22AACEFF100A3DAE4 /* SpeechRecognizerError.swift in Sources */,
+				D48027532AAD2182008E3A9E /* Scene.swift in Sources */,
 				D45021B62AACF18300A3DAE4 /* SpeechConfig.swift in Sources */,
+				D48027512AAD2168008E3A9E /* TransitionType.swift in Sources */,
 				D45021892AAB40A400A3DAE4 /* ViewModel.swift in Sources */,
 				D45021AE2AACBA5000A3DAE4 /* SpeechRecognizer.swift in Sources */,
 				D48027442AAD183A008E3A9E /* SpeechRepository.swift in Sources */,
