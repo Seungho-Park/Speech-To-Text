@@ -15,6 +15,9 @@
 		D450219E2AAC6F0800A3DAE4 /* SpeechRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450219D2AAC6F0800A3DAE4 /* SpeechRequest.swift */; };
 		D45021A02AAC704500A3DAE4 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450219F2AAC704500A3DAE4 /* SpeechService.swift */; };
 		D45021A32AAC74BA00A3DAE4 /* SpeechRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021A22AAC74BA00A3DAE4 /* SpeechRequestError.swift */; };
+		D45021A62AAC964200A3DAE4 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021A52AAC964200A3DAE4 /* AppDIContainer.swift */; };
+		D45021A82AAC97F700A3DAE4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021A72AAC97F700A3DAE4 /* AppCoordinator.swift */; };
+		D45021AA2AAC989F00A3DAE4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021A92AAC989F00A3DAE4 /* SplashViewController.swift */; };
 		D46DFBED2AAB375D00595627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46DFBEC2AAB375D00595627 /* AppDelegate.swift */; };
 		D46DFBEF2AAB375D00595627 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46DFBEE2AAB375D00595627 /* SceneDelegate.swift */; };
 		D46DFBF72AAB375D00595627 /* Speech_To_Text.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D46DFBF52AAB375D00595627 /* Speech_To_Text.xcdatamodeld */; };
@@ -49,6 +52,9 @@
 		D450219D2AAC6F0800A3DAE4 /* SpeechRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRequest.swift; sourceTree = "<group>"; };
 		D450219F2AAC704500A3DAE4 /* SpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechService.swift; sourceTree = "<group>"; };
 		D45021A22AAC74BA00A3DAE4 /* SpeechRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRequestError.swift; sourceTree = "<group>"; };
+		D45021A52AAC964200A3DAE4 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		D45021A72AAC97F700A3DAE4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D45021A92AAC989F00A3DAE4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		D46DFBE92AAB375D00595627 /* Speech-To-Text.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speech-To-Text.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46DFBEC2AAB375D00595627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D46DFBEE2AAB375D00595627 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,8 +99,10 @@
 		D45021842AAB3C8B00A3DAE4 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				D45021A42AAC963A00A3DAE4 /* DI */,
 				D46DFBEC2AAB375D00595627 /* AppDelegate.swift */,
 				D46DFBEE2AAB375D00595627 /* SceneDelegate.swift */,
+				D45021A72AAC97F700A3DAE4 /* AppCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -168,6 +176,7 @@
 		D45021902AAB4D8D00A3DAE4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D45021A92AAC989F00A3DAE4 /* SplashViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,6 +214,14 @@
 				D45021A22AAC74BA00A3DAE4 /* SpeechRequestError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		D45021A42AAC963A00A3DAE4 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				D45021A52AAC964200A3DAE4 /* AppDIContainer.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 		D46DFBE02AAB375D00595627 = {
@@ -395,8 +412,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45021A82AAC97F700A3DAE4 /* AppCoordinator.swift in Sources */,
 				D45021922AAB4D9700A3DAE4 /* SplashViewModel.swift in Sources */,
 				D46DFBF72AAB375D00595627 /* Speech_To_Text.xcdatamodeld in Sources */,
+				D45021AA2AAC989F00A3DAE4 /* SplashViewController.swift in Sources */,
+				D45021A62AAC964200A3DAE4 /* AppDIContainer.swift in Sources */,
 				D46DFBED2AAB375D00595627 /* AppDelegate.swift in Sources */,
 				D45021892AAB40A400A3DAE4 /* ViewModelType.swift in Sources */,
 				D45021A32AAC74BA00A3DAE4 /* SpeechRequestError.swift in Sources */,

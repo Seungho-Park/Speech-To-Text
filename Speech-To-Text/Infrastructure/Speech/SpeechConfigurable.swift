@@ -10,3 +10,11 @@ import Foundation
 protocol SpeechConfigurable {
     var locale: Locale { get }
 }
+
+class SpeechConfig: SpeechConfigurable {
+    let locale: Locale
+    
+    init(locale: Locale) {
+        self.locale = locale
+    }
+}

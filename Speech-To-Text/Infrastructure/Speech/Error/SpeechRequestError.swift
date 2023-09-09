@@ -8,5 +8,8 @@
 import Foundation
 
 enum SpeechRequestError: Error {
+    case audioSession(error: Error)
+    case audioStartError(error: Error)
     case audioEngineNil
+    case bufferRequestError
 }

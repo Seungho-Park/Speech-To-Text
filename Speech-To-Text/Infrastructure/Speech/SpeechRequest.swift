@@ -10,10 +10,11 @@ import Speech
 import AVFoundation
 
 protocol SpeechRequestable {
+    typealias CompletionHandler = (SFSpeechAudioBufferRecognitionRequest?, AVAudioInputNode?, SpeechRequestError?)-> Void
     var audioEngine: AVAudioEngine? { get }
     var audioBufferReq: SFSpeechAudioBufferRecognitionRequest? { get }
     
-    func prepare() throws
+    func prepare(completion: @escaping CompletionHandler)
     func reset()
 }
 
@@ -32,16 +33,33 @@ class SpeechRequest: SpeechRequestable {
         self.audioBufferReq = audioBufferReq
     }
     
-    func prepare() throws {
+    func prepare(completion: @escaping CompletionHandler) {
         let audioSession = AVAudioSession.sharedInstance()
-        try audioSession.setCategory(.playAndRecord, mode: .measurement, options: .duckOthers)
-        try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
-        
-        guard let inputNode = audioEngine?.inputNode else {
-            throw SpeechRequestError.audioEngineNil
+        do {
+            try audioSession.setCategory(.playAndRecord, mode: .measurement, options: .duckOthers)
+            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+            
+            guard let inputNode = audioEngine?.inputNode else {
+                completion(nil, nil, .audioEngineNil)
+                return
+            }
+            
+            guard let request = audioBufferReq else {
+                completion(nil, nil, .bufferRequestError)
+                return
+            }
+            
+            inputNode.installTap(onBus: .zero, bufferSize: 1024, format: inputNode.outputFormat(forBus: .zero)) { buffer, time in
+                request.append(buffer)
+            }
+            
+            audioEngine?.prepare()
+            try audioEngine?.start()
+            
+            completion(request, inputNode, nil)
+        } catch let error {
+            completion(nil, nil, .audioSession(error: error))
         }
-        
-        audioEngine?.prepare()
     }
     
     func reset() {
