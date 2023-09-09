@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-class SplashViewModel: ViewModelType {
+class SplashViewModel: ViewModel {
     struct Input {
         
     }

@@ -19,8 +19,6 @@ class AppDIContainer {
     
     func makeSplashScene()-> SplashViewController {
         let vc = SplashViewController()
-        vc.service = speechService
-
         return vc
     }
 }
