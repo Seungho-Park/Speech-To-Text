@@ -22,6 +22,10 @@ class DefaultSpeechService {
     private var engine: AVAudioEngine? = nil
     private var task: SFSpeechRecognitionTask? = nil {
         willSet {
+            if task == nil {
+                return
+            }
+            
             stopRecording()
         }
     }
