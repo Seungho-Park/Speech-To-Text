@@ -30,7 +30,7 @@
 		D45021C22AACF6B400A3DAE4 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450219F2AAC704500A3DAE4 /* SpeechService.swift */; };
 		D46DFBED2AAB375D00595627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46DFBEC2AAB375D00595627 /* AppDelegate.swift */; };
 		D46DFBEF2AAB375D00595627 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46DFBEE2AAB375D00595627 /* SceneDelegate.swift */; };
-		D46DFBF72AAB375D00595627 /* Speech_To_Text.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D46DFBF52AAB375D00595627 /* Speech_To_Text.xcdatamodeld */; };
+		D46DFBF72AAB375D00595627 /* CoreDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D46DFBF52AAB375D00595627 /* CoreDataStorage.xcdatamodeld */; };
 		D46DFBF92AAB376000595627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D46DFBF82AAB376000595627 /* Assets.xcassets */; };
 		D46DFBFC2AAB376000595627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46DFBFA2AAB376000595627 /* LaunchScreen.storyboard */; };
 		D46DFC072AAB376100595627 /* Speech_To_TextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46DFC062AAB376100595627 /* Speech_To_TextTests.swift */; };
@@ -169,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				D450218C2AAB40E900A3DAE4 /* Repositories */,
+				D48027592AAD2B60008E3A9E /* Storage */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -306,7 +307,6 @@
 				D45021872AAB409700A3DAE4 /* Presentation */,
 				D45021992AAC6D9000A3DAE4 /* Infrastructure */,
 				D45021862AAB3C9700A3DAE4 /* Resources */,
-				D46DFBF52AAB375D00595627 /* Speech_To_Text.xcdatamodeld */,
 			);
 			path = "Speech-To-Text";
 			sourceTree = "<group>";
@@ -385,6 +385,14 @@
 			children = (
 			);
 			path = Usecase;
+			sourceTree = "<group>";
+		};
+		D48027592AAD2B60008E3A9E /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				D46DFBF52AAB375D00595627 /* CoreDataStorage.xcdatamodeld */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -529,7 +537,7 @@
 				D45021922AAB4D9700A3DAE4 /* SplashViewModel.swift in Sources */,
 				D480274E2AAD1C23008E3A9E /* ViewModelBindable.swift in Sources */,
 				D48027462AAD1928008E3A9E /* SplashRepositoryImpl.swift in Sources */,
-				D46DFBF72AAB375D00595627 /* Speech_To_Text.xcdatamodeld in Sources */,
+				D46DFBF72AAB375D00595627 /* CoreDataStorage.xcdatamodeld in Sources */,
 				D480274C2AAD1BF5008E3A9E /* BaseViewController.swift in Sources */,
 				D45021AA2AAC989F00A3DAE4 /* SplashViewController.swift in Sources */,
 				D45021A62AAC964200A3DAE4 /* AppDIContainer.swift in Sources */,
@@ -911,13 +919,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		D46DFBF52AAB375D00595627 /* Speech_To_Text.xcdatamodeld */ = {
+		D46DFBF52AAB375D00595627 /* CoreDataStorage.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				D46DFBF62AAB375D00595627 /* Speech_To_Text.xcdatamodel */,
 			);
 			currentVersion = D46DFBF62AAB375D00595627 /* Speech_To_Text.xcdatamodel */;
-			path = Speech_To_Text.xcdatamodeld;
+			path = CoreDataStorage.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
