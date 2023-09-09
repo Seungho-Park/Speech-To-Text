@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D45021892AAB40A400A3DAE4 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021882AAB40A400A3DAE4 /* ViewModelType.swift */; };
+		D45021922AAB4D9700A3DAE4 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021912AAB4D9700A3DAE4 /* SplashViewModel.swift */; };
+		D45021952AAB4DF600A3DAE4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D45021942AAB4DF600A3DAE4 /* RxCocoa */; };
+		D45021972AAB4DF600A3DAE4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D45021962AAB4DF600A3DAE4 /* RxSwift */; };
+		D450219C2AAC6DA700A3DAE4 /* SpeechConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450219B2AAC6DA700A3DAE4 /* SpeechConfigurable.swift */; };
+		D450219E2AAC6F0800A3DAE4 /* SpeechRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450219D2AAC6F0800A3DAE4 /* SpeechRequest.swift */; };
+		D45021A02AAC704500A3DAE4 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450219F2AAC704500A3DAE4 /* SpeechService.swift */; };
+		D45021A32AAC74BA00A3DAE4 /* SpeechRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021A22AAC74BA00A3DAE4 /* SpeechRequestError.swift */; };
 		D46DFBED2AAB375D00595627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46DFBEC2AAB375D00595627 /* AppDelegate.swift */; };
 		D46DFBEF2AAB375D00595627 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46DFBEE2AAB375D00595627 /* SceneDelegate.swift */; };
 		D46DFBF72AAB375D00595627 /* Speech_To_Text.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D46DFBF52AAB375D00595627 /* Speech_To_Text.xcdatamodeld */; };
@@ -35,6 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D45021882AAB40A400A3DAE4 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		D45021912AAB4D9700A3DAE4 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		D450219B2AAC6DA700A3DAE4 /* SpeechConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechConfigurable.swift; sourceTree = "<group>"; };
+		D450219D2AAC6F0800A3DAE4 /* SpeechRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRequest.swift; sourceTree = "<group>"; };
+		D450219F2AAC704500A3DAE4 /* SpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechService.swift; sourceTree = "<group>"; };
+		D45021A22AAC74BA00A3DAE4 /* SpeechRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRequestError.swift; sourceTree = "<group>"; };
 		D46DFBE92AAB375D00595627 /* Speech-To-Text.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speech-To-Text.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46DFBEC2AAB375D00595627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D46DFBEE2AAB375D00595627 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45021972AAB4DF600A3DAE4 /* RxSwift in Frameworks */,
+				D45021952AAB4DF600A3DAE4 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +109,104 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		D45021872AAB409700A3DAE4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D45021982AAB4EEB00A3DAE4 /* Common */,
+				D450218E2AAB4D7D00A3DAE4 /* SplashScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D450218A2AAB40D600A3DAE4 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D450218D2AAB40F700A3DAE4 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D450218B2AAB40DD00A3DAE4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D450218C2AAB40E900A3DAE4 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D450218C2AAB40E900A3DAE4 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		D450218D2AAB40F700A3DAE4 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		D450218E2AAB4D7D00A3DAE4 /* SplashScene */ = {
+			isa = PBXGroup;
+			children = (
+				D450218F2AAB4D8700A3DAE4 /* ViewModel */,
+				D45021902AAB4D8D00A3DAE4 /* View */,
+			);
+			path = SplashScene;
+			sourceTree = "<group>";
+		};
+		D450218F2AAB4D8700A3DAE4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D45021912AAB4D9700A3DAE4 /* SplashViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D45021902AAB4D8D00A3DAE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D45021982AAB4EEB00A3DAE4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D45021882AAB40A400A3DAE4 /* ViewModelType.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D45021992AAC6D9000A3DAE4 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				D450219A2AAC6D9A00A3DAE4 /* Speech */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		D450219A2AAC6D9A00A3DAE4 /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				D45021A12AAC74AC00A3DAE4 /* Error */,
+				D450219B2AAC6DA700A3DAE4 /* SpeechConfigurable.swift */,
+				D450219D2AAC6F0800A3DAE4 /* SpeechRequest.swift */,
+				D450219F2AAC704500A3DAE4 /* SpeechService.swift */,
+			);
+			path = Speech;
+			sourceTree = "<group>";
+		};
+		D45021A12AAC74AC00A3DAE4 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				D45021A22AAC74BA00A3DAE4 /* SpeechRequestError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		D46DFBE02AAB375D00595627 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +231,10 @@
 			isa = PBXGroup;
 			children = (
 				D45021842AAB3C8B00A3DAE4 /* Application */,
+				D450218B2AAB40DD00A3DAE4 /* Data */,
+				D450218A2AAB40D600A3DAE4 /* Domain */,
+				D45021872AAB409700A3DAE4 /* Presentation */,
+				D45021992AAC6D9000A3DAE4 /* Infrastructure */,
 				D45021862AAB3C9700A3DAE4 /* Resources */,
 				D46DFBF52AAB375D00595627 /* Speech_To_Text.xcdatamodeld */,
 			);
@@ -156,6 +274,10 @@
 			dependencies = (
 			);
 			name = "Speech-To-Text";
+			packageProductDependencies = (
+				D45021942AAB4DF600A3DAE4 /* RxCocoa */,
+				D45021962AAB4DF600A3DAE4 /* RxSwift */,
+			);
 			productName = "Speech-To-Text";
 			productReference = D46DFBE92AAB375D00595627 /* Speech-To-Text.app */;
 			productType = "com.apple.product-type.application";
@@ -228,6 +350,9 @@
 				Base,
 			);
 			mainGroup = D46DFBE02AAB375D00595627;
+			packageReferences = (
+				D45021932AAB4DF600A3DAE4 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = D46DFBEA2AAB375D00595627 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -270,9 +395,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45021922AAB4D9700A3DAE4 /* SplashViewModel.swift in Sources */,
 				D46DFBF72AAB375D00595627 /* Speech_To_Text.xcdatamodeld in Sources */,
 				D46DFBED2AAB375D00595627 /* AppDelegate.swift in Sources */,
+				D45021892AAB40A400A3DAE4 /* ViewModelType.swift in Sources */,
+				D45021A32AAC74BA00A3DAE4 /* SpeechRequestError.swift in Sources */,
+				D450219C2AAC6DA700A3DAE4 /* SpeechConfigurable.swift in Sources */,
 				D46DFBEF2AAB375D00595627 /* SceneDelegate.swift in Sources */,
+				D450219E2AAC6F0800A3DAE4 /* SpeechRequest.swift in Sources */,
+				D45021A02AAC704500A3DAE4 /* SpeechService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +735,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D45021932AAB4DF600A3DAE4 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D45021942AAB4DF600A3DAE4 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D45021932AAB4DF600A3DAE4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		D45021962AAB4DF600A3DAE4 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D45021932AAB4DF600A3DAE4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D46DFBF52AAB375D00595627 /* Speech_To_Text.xcdatamodeld */ = {
