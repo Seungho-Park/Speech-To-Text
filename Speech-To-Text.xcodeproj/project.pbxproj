@@ -11,13 +11,23 @@
 		D45021922AAB4D9700A3DAE4 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021912AAB4D9700A3DAE4 /* SplashViewModel.swift */; };
 		D45021952AAB4DF600A3DAE4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D45021942AAB4DF600A3DAE4 /* RxCocoa */; };
 		D45021972AAB4DF600A3DAE4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D45021962AAB4DF600A3DAE4 /* RxSwift */; };
-		D450219C2AAC6DA700A3DAE4 /* SpeechConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450219B2AAC6DA700A3DAE4 /* SpeechConfigurable.swift */; };
-		D450219E2AAC6F0800A3DAE4 /* SpeechRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450219D2AAC6F0800A3DAE4 /* SpeechRequest.swift */; };
 		D45021A02AAC704500A3DAE4 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450219F2AAC704500A3DAE4 /* SpeechService.swift */; };
-		D45021A32AAC74BA00A3DAE4 /* SpeechRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021A22AAC74BA00A3DAE4 /* SpeechRequestError.swift */; };
 		D45021A62AAC964200A3DAE4 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021A52AAC964200A3DAE4 /* AppDIContainer.swift */; };
 		D45021A82AAC97F700A3DAE4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021A72AAC97F700A3DAE4 /* AppCoordinator.swift */; };
 		D45021AA2AAC989F00A3DAE4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021A92AAC989F00A3DAE4 /* SplashViewController.swift */; };
+		D45021AC2AACB4FB00A3DAE4 /* SpeechServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021AB2AACB4FB00A3DAE4 /* SpeechServiceError.swift */; };
+		D45021AE2AACBA5000A3DAE4 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021AD2AACBA5000A3DAE4 /* SpeechRecognizer.swift */; };
+		D45021B02AACEB8400A3DAE4 /* SpeechRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021AF2AACEB8400A3DAE4 /* SpeechRequest.swift */; };
+		D45021B22AACEFF100A3DAE4 /* SpeechRecognizerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021B12AACEFF100A3DAE4 /* SpeechRecognizerError.swift */; };
+		D45021B62AACF18300A3DAE4 /* SpeechConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021B52AACF18300A3DAE4 /* SpeechConfig.swift */; };
+		D45021B82AACF68200A3DAE4 /* SpeechServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021B72AACF68200A3DAE4 /* SpeechServiceTests.swift */; };
+		D45021BC2AACF69500A3DAE4 /* SpeechRecognizerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021BB2AACF69500A3DAE4 /* SpeechRecognizerMock.swift */; };
+		D45021BD2AACF6B400A3DAE4 /* SpeechServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021AB2AACB4FB00A3DAE4 /* SpeechServiceError.swift */; };
+		D45021BE2AACF6B400A3DAE4 /* SpeechRecognizerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021B12AACEFF100A3DAE4 /* SpeechRecognizerError.swift */; };
+		D45021BF2AACF6B400A3DAE4 /* SpeechConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021B52AACF18300A3DAE4 /* SpeechConfig.swift */; };
+		D45021C02AACF6B400A3DAE4 /* SpeechRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021AF2AACEB8400A3DAE4 /* SpeechRequest.swift */; };
+		D45021C12AACF6B400A3DAE4 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45021AD2AACBA5000A3DAE4 /* SpeechRecognizer.swift */; };
+		D45021C22AACF6B400A3DAE4 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450219F2AAC704500A3DAE4 /* SpeechService.swift */; };
 		D46DFBED2AAB375D00595627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46DFBEC2AAB375D00595627 /* AppDelegate.swift */; };
 		D46DFBEF2AAB375D00595627 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46DFBEE2AAB375D00595627 /* SceneDelegate.swift */; };
 		D46DFBF72AAB375D00595627 /* Speech_To_Text.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D46DFBF52AAB375D00595627 /* Speech_To_Text.xcdatamodeld */; };
@@ -48,13 +58,17 @@
 /* Begin PBXFileReference section */
 		D45021882AAB40A400A3DAE4 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		D45021912AAB4D9700A3DAE4 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
-		D450219B2AAC6DA700A3DAE4 /* SpeechConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechConfigurable.swift; sourceTree = "<group>"; };
-		D450219D2AAC6F0800A3DAE4 /* SpeechRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRequest.swift; sourceTree = "<group>"; };
 		D450219F2AAC704500A3DAE4 /* SpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechService.swift; sourceTree = "<group>"; };
-		D45021A22AAC74BA00A3DAE4 /* SpeechRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRequestError.swift; sourceTree = "<group>"; };
 		D45021A52AAC964200A3DAE4 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		D45021A72AAC97F700A3DAE4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		D45021A92AAC989F00A3DAE4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		D45021AB2AACB4FB00A3DAE4 /* SpeechServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechServiceError.swift; sourceTree = "<group>"; };
+		D45021AD2AACBA5000A3DAE4 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		D45021AF2AACEB8400A3DAE4 /* SpeechRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRequest.swift; sourceTree = "<group>"; };
+		D45021B12AACEFF100A3DAE4 /* SpeechRecognizerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerError.swift; sourceTree = "<group>"; };
+		D45021B52AACF18300A3DAE4 /* SpeechConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechConfig.swift; sourceTree = "<group>"; };
+		D45021B72AACF68200A3DAE4 /* SpeechServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechServiceTests.swift; sourceTree = "<group>"; };
+		D45021BB2AACF69500A3DAE4 /* SpeechRecognizerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerMock.swift; sourceTree = "<group>"; };
 		D46DFBE92AAB375D00595627 /* Speech-To-Text.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speech-To-Text.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46DFBEC2AAB375D00595627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D46DFBEE2AAB375D00595627 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -201,8 +215,9 @@
 			isa = PBXGroup;
 			children = (
 				D45021A12AAC74AC00A3DAE4 /* Error */,
-				D450219B2AAC6DA700A3DAE4 /* SpeechConfigurable.swift */,
-				D450219D2AAC6F0800A3DAE4 /* SpeechRequest.swift */,
+				D45021B52AACF18300A3DAE4 /* SpeechConfig.swift */,
+				D45021AF2AACEB8400A3DAE4 /* SpeechRequest.swift */,
+				D45021AD2AACBA5000A3DAE4 /* SpeechRecognizer.swift */,
 				D450219F2AAC704500A3DAE4 /* SpeechService.swift */,
 			);
 			path = Speech;
@@ -211,7 +226,8 @@
 		D45021A12AAC74AC00A3DAE4 /* Error */ = {
 			isa = PBXGroup;
 			children = (
-				D45021A22AAC74BA00A3DAE4 /* SpeechRequestError.swift */,
+				D45021AB2AACB4FB00A3DAE4 /* SpeechServiceError.swift */,
+				D45021B12AACEFF100A3DAE4 /* SpeechRecognizerError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -222,6 +238,23 @@
 				D45021A52AAC964200A3DAE4 /* AppDIContainer.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		D45021B92AACF68600A3DAE4 /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				D45021BA2AACF68B00A3DAE4 /* Mock */,
+				D45021B72AACF68200A3DAE4 /* SpeechServiceTests.swift */,
+			);
+			path = Speech;
+			sourceTree = "<group>";
+		};
+		D45021BA2AACF68B00A3DAE4 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				D45021BB2AACF69500A3DAE4 /* SpeechRecognizerMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		D46DFBE02AAB375D00595627 = {
@@ -261,6 +294,7 @@
 		D46DFC052AAB376100595627 /* Speech-To-TextTests */ = {
 			isa = PBXGroup;
 			children = (
+				D45021B92AACF68600A3DAE4 /* Speech */,
 				D46DFC062AAB376100595627 /* Speech_To_TextTests.swift */,
 			);
 			path = "Speech-To-TextTests";
@@ -418,12 +452,14 @@
 				D45021AA2AAC989F00A3DAE4 /* SplashViewController.swift in Sources */,
 				D45021A62AAC964200A3DAE4 /* AppDIContainer.swift in Sources */,
 				D46DFBED2AAB375D00595627 /* AppDelegate.swift in Sources */,
+				D45021B22AACEFF100A3DAE4 /* SpeechRecognizerError.swift in Sources */,
+				D45021B62AACF18300A3DAE4 /* SpeechConfig.swift in Sources */,
 				D45021892AAB40A400A3DAE4 /* ViewModelType.swift in Sources */,
-				D45021A32AAC74BA00A3DAE4 /* SpeechRequestError.swift in Sources */,
-				D450219C2AAC6DA700A3DAE4 /* SpeechConfigurable.swift in Sources */,
+				D45021AE2AACBA5000A3DAE4 /* SpeechRecognizer.swift in Sources */,
 				D46DFBEF2AAB375D00595627 /* SceneDelegate.swift in Sources */,
-				D450219E2AAC6F0800A3DAE4 /* SpeechRequest.swift in Sources */,
 				D45021A02AAC704500A3DAE4 /* SpeechService.swift in Sources */,
+				D45021AC2AACB4FB00A3DAE4 /* SpeechServiceError.swift in Sources */,
+				D45021B02AACEB8400A3DAE4 /* SpeechRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +467,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45021BD2AACF6B400A3DAE4 /* SpeechServiceError.swift in Sources */,
+				D45021BE2AACF6B400A3DAE4 /* SpeechRecognizerError.swift in Sources */,
+				D45021BF2AACF6B400A3DAE4 /* SpeechConfig.swift in Sources */,
+				D45021C02AACF6B400A3DAE4 /* SpeechRequest.swift in Sources */,
+				D45021C12AACF6B400A3DAE4 /* SpeechRecognizer.swift in Sources */,
+				D45021C22AACF6B400A3DAE4 /* SpeechService.swift in Sources */,
 				D46DFC072AAB376100595627 /* Speech_To_TextTests.swift in Sources */,
+				D45021B82AACF68200A3DAE4 /* SpeechServiceTests.swift in Sources */,
+				D45021BC2AACF69500A3DAE4 /* SpeechRecognizerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,7 +32,13 @@ class SplashViewController: UIViewController {
         let bf = SFSpeechAudioBufferRecognitionRequest()
         bf.shouldReportPartialResults = true
 
-        let req = SpeechRequest(audioEngine: AVAudioEngine(), audioBufferReq: bf)
-        self.service?.startRecording(request: req)
+        service?.startRecording(request: SpeechRequest(shouldReportPartialResults: true), completion: { result in
+            switch result {
+            case .success(let speech):
+                print(speech)
+            case .failure(let error):
+                print(error)
+            }
+        })
     }
 }

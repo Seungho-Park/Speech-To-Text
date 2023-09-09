@@ -10,46 +10,59 @@ import AVFoundation
 import Speech
 
 protocol SpeechService {
-    var recognizer: SFSpeechRecognizer { get }
-    var config: SpeechConfigurable { get }
+    typealias CompletionHandler = (Result<String, SpeechServiceError>) -> Void
     
-    func startRecording(request: SpeechRequest)
+    func startRecording(request: SpeechRequestable, completion: @escaping CompletionHandler)
+    func stopRecording()
 }
 
-extension SpeechService {
-    func startRecording(request: SpeechRequest) {
-        request.prepare { audioReq, inputNode, error in
-            if let error = error {
-                //TODO: Error -
-                return
-            }
-            
-            if let audioReq, let inputNode {
-                recognizer.recognitionTask(with: audioReq) { result, error in
-                    let isFinal = result?.isFinal ?? false
-                    
-                    if isFinal || error != nil {
-                        //TODO: End Recording -
-                        request.reset()
-                        inputNode.removeTap(onBus: .zero)
-                    }
-                    
-                    if let result {
-                        print(result.bestTranscription.formattedString)
-                    }
-                }
-            }
-        }
+class DefaultSpeechService {
+    private let recognizer: SpeechRecognizer
+    
+    private var engine: AVAudioEngine? = nil
+    private var task: SFSpeechRecognitionTask? = nil
+    
+    init(recognizer: SpeechRecognizer) {
+        self.recognizer = recognizer
+    }
+    
+    private func start() {
+        
     }
 }
 
 
-class DefaultSpeechService: SpeechService {
-    let recognizer: SFSpeechRecognizer
-    let config: SpeechConfigurable
+extension DefaultSpeechService: SpeechService {
+    func startRecording(request: SpeechRequestable, completion: @escaping CompletionHandler) {
+        do {
+            let request = try request.request(locale: .current)
+            self.engine = request.engine
+            task = recognizer.recognitionTask(with: request.request) { [weak self] string, error in
+                if let error = error {
+                    if case SpeechRecognizerError.complete(let err) = error {
+                        self?.stopRecording()
+                        request.engine.stop()
+                        request.engine.inputNode.removeTap(onBus: .zero)
+                        
+                        completion(.failure(.complete(error: err)))
+                    } else {
+                        completion(.failure(.request(error: error)))
+                    }
+                    
+                    return
+                }
+                
+                completion(.success(string ?? ""))
+            }
+        } catch let error {
+            completion(.failure(.request(error: error)))
+        }
+    }
     
-    init(config: SpeechConfigurable) {
-        self.config = config
-        recognizer = SFSpeechRecognizer(locale: self.config.locale)!
+    func stopRecording() {
+        task?.cancel()
+        engine?.stop()
+        engine = nil
+        task = nil
     }
 }

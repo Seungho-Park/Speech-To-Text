@@ -1,11 +1,12 @@
 //
-//  SpeechConfigurable.swift
+//  SpeechConfig.swift
 //  Speech-To-Text
 //
-//  Created by 박승호 on 2023/09/09.
+//  Created by 박승호 on 2023/09/10.
 //
 
 import Foundation
+
 
 protocol SpeechConfigurable {
     var locale: Locale { get }

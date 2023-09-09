@@ -11,15 +11,16 @@ import Foundation
 class AppDIContainer {
     lazy var speechService: SpeechService = {
         let config = SpeechConfig(locale: Locale.init(identifier: "ko-KR"))
-        let service = DefaultSpeechService(config: config)
-        
+        let recognizer = DefaultSpeechRecognizer(config: config)
+        let service = DefaultSpeechService(recognizer: recognizer)
+
         return service
     }()
     
     func makeSplashScene()-> SplashViewController {
         let vc = SplashViewController()
         vc.service = speechService
-        
+
         return vc
     }
 }
