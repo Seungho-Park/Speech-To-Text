@@ -7,15 +7,14 @@
 
 import Foundation
 import UIKit
-import AVFoundation
-import Speech
 
-class SplashViewController: UIViewController {
-    var service: SpeechService? = nil
-    
+class SplashViewController: BaseViewController<SplashViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .systemBackground
+    }
+    
+    override func bind() {
+        super.bind()
     }
 }

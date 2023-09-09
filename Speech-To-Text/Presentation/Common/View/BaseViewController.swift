@@ -13,6 +13,18 @@ class BaseViewController<T>: UIViewController, ViewModelBindable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUI()
+        setupConstraints()
+    }
+    
+    func setupUI() {
+        self.view.clipsToBounds = true
+        self.view.backgroundColor = .systemBackground
+    }
+    
+    func setupConstraints() {
+        
     }
     
     func bind() {
