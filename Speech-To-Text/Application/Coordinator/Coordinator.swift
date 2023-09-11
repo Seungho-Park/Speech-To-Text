@@ -54,3 +54,10 @@ extension Coordinator {
         }
     }
 }
+
+
+private extension UIViewController {
+    var sceneViewController: UIViewController {
+        self.children.first ?? self
+    }
+}

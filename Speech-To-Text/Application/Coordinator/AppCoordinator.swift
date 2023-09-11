@@ -8,12 +8,6 @@
 import Foundation
 import UIKit
 
-private extension UIViewController {
-    var sceneViewController: UIViewController {
-        self.children.first ?? self
-    }
-}
-
 class AppCoordinator: Coordinator {
     let window: UIWindow
     var currentScene: UIViewController? = nil
