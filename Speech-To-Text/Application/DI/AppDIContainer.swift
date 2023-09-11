@@ -17,8 +17,8 @@ class AppDIContainer {
         return service
     }()
     
-    func makeSplashScene()-> SplashViewController {
-        let vc = SplashViewController()
-        return vc
+    func makeSplashViewModel()-> SplashViewModel {
+        let viewModel = SplashViewModel()
+        return viewModel
     }
 }

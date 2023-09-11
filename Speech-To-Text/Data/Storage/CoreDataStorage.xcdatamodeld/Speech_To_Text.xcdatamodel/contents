@@ -2,7 +2,8 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22G91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="SpeechEntity" representedClassName="SpeechEntity" syncable="YES" codeGenerationType="class">
         <attribute name="contents" optional="YES" attributeType="String"/>
-        <attribute name="createDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="createDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="title" attributeType="String"/>
+        <attribute name="updateDate" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
 </model>

@@ -10,4 +10,5 @@ import Foundation
 
 protocol SpeechRepository {
     func fetchPermission()-> Bool
+    func fetchRecordHistories()-> [Record]
 }

@@ -19,6 +19,6 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        
+        transition(scene: AppScene.splash(diContainer.makeSplashViewModel()), style: .root)
     }
 }

@@ -45,6 +45,9 @@
 		D48027532AAD2182008E3A9E /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48027522AAD2182008E3A9E /* Scene.swift */; };
 		D48027582AAD2531008E3A9E /* SpeechRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48027432AAD183A008E3A9E /* SpeechRepository.swift */; };
 		D4F958C02AAFCA8500372D9E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F958BF2AAFCA8500372D9E /* Coordinator.swift */; };
+		D4F958C42AAFD56D00372D9E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F958C32AAFD56D00372D9E /* Log.swift */; };
+		D4F958C62AAFDB3000372D9E /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F958C52AAFDB3000372D9E /* Record.swift */; };
+		D4F958C82AAFDBDB00372D9E /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F958C72AAFDBDB00372D9E /* CoreDataStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,9 @@
 		D48027502AAD2168008E3A9E /* TransitionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionStyle.swift; sourceTree = "<group>"; };
 		D48027522AAD2182008E3A9E /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		D4F958BF2AAFCA8500372D9E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D4F958C32AAFD56D00372D9E /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		D4F958C52AAFDB3000372D9E /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		D4F958C72AAFDBDB00372D9E /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +193,7 @@
 		D450218D2AAB40F700A3DAE4 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				D4F958C52AAFDB3000372D9E /* Record.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -308,6 +315,7 @@
 				D450218A2AAB40D600A3DAE4 /* Domain */,
 				D45021872AAB409700A3DAE4 /* Presentation */,
 				D45021992AAC6D9000A3DAE4 /* Infrastructure */,
+				D4F958C12AAFD55C00372D9E /* Utils */,
 				D45021862AAB3C9700A3DAE4 /* Resources */,
 			);
 			path = "Speech-To-Text";
@@ -393,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				D46DFBF52AAB375D00595627 /* CoreDataStorage.xcdatamodeld */,
+				D4F958C72AAFDBDB00372D9E /* CoreDataStorage.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -404,6 +413,22 @@
 				D45021A72AAC97F700A3DAE4 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D4F958C12AAFD55C00372D9E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D4F958C22AAFD56700372D9E /* Log */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D4F958C22AAFD56700372D9E /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				D4F958C32AAFD56D00372D9E /* Log.swift */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,10 +577,13 @@
 				D4F958C02AAFCA8500372D9E /* Coordinator.swift in Sources */,
 				D480274C2AAD1BF5008E3A9E /* BaseViewController.swift in Sources */,
 				D45021AA2AAC989F00A3DAE4 /* SplashViewController.swift in Sources */,
+				D4F958C42AAFD56D00372D9E /* Log.swift in Sources */,
 				D45021A62AAC964200A3DAE4 /* AppDIContainer.swift in Sources */,
 				D46DFBED2AAB375D00595627 /* AppDelegate.swift in Sources */,
 				D45021B22AACEFF100A3DAE4 /* SpeechRecognizerError.swift in Sources */,
 				D48027532AAD2182008E3A9E /* Scene.swift in Sources */,
+				D4F958C62AAFDB3000372D9E /* Record.swift in Sources */,
+				D4F958C82AAFDBDB00372D9E /* CoreDataStorage.swift in Sources */,
 				D45021B62AACF18300A3DAE4 /* SpeechConfig.swift in Sources */,
 				D48027512AAD2168008E3A9E /* TransitionStyle.swift in Sources */,
 				D45021892AAB40A400A3DAE4 /* ViewModel.swift in Sources */,
