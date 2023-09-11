@@ -8,41 +8,70 @@
 import Foundation
 import UIKit
 
-protocol Coordinator {
+protocol Coordinator: AnyObject {
+    var window: UIWindow { get }
+    var currentScene: UIViewController? { get set }
     
-    func transition(scene: Scene, style: TransitionType, isAnimated: Bool)
-    func close(isAnimated: Bool)
+    func transition(scene: Scene, style: TransitionStyle, animated: Bool)
+    func close(animated: Bool)
+    func start()
 }
 
 extension Coordinator {
-    
-    func transition(scene: Scene, style: TransitionType, isAnimated: Bool) {
+    func transition(scene: Scene, style: TransitionStyle, animated: Bool = true) {
         let vc = scene.instantiate()
         
         switch style {
-        case .root: break
-        
-        case .push: break
+        case .root:
+            window.rootViewController = vc
+            window.makeKeyAndVisible()
+            currentScene = vc.sceneViewController
+        case .push:
+            guard let navController = currentScene?.navigationController else {
+                //TODO: Error -
+                return
+            }
             
-        case .modal: break
+            navController.pushViewController(vc, animated: animated)
+            currentScene = navController.sceneViewController
+        case .modal:
+            currentScene?.present(vc, animated: animated) {
+                self.currentScene = vc.sceneViewController
+            }
         }
     }
     
-    func close(isAnimated: Bool) {
-        
+    func close(animated: Bool = true) {
+        if let presentingVC = currentScene?.presentingViewController {
+            currentScene?.dismiss(animated: animated) {
+                self.currentScene = presentingVC.sceneViewController
+            }
+        } else if let navController = currentScene?.navigationController {
+            navController.popViewController(animated: animated)
+            currentScene = navController.sceneViewController
+        } else {
+            //TODO: Error -
+        }
     }
 }
 
-class AppCoordinator {
-    let navController: UINavigationController
+extension UIViewController {
+    var sceneViewController: UIViewController {
+        self.children.first ?? self
+    }
+}
+
+class AppCoordinator: Coordinator {
+    let window: UIWindow
+    var currentScene: UIViewController? = nil
     let diContainer: AppDIContainer
     
-    init(navController: UINavigationController, diContainer: AppDIContainer) {
-        self.navController = navController
+    init(window: UIWindow, diContainer: AppDIContainer) {
+        self.window = window
         self.diContainer = diContainer
     }
     
     func start() {
-        navController.pushViewController(diContainer.makeSplashScene(), animated: false)
+        
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum TransitionType {
+enum TransitionStyle {
     case root
     case push
     case modal

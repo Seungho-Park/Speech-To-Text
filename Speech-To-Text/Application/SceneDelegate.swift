@@ -24,10 +24,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
         
-        let appDIContainer = AppDIContainer()
-        let coordinator = AppCoordinator(navController: navController, diContainer: appDIContainer)
-        
-        coordinator.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
