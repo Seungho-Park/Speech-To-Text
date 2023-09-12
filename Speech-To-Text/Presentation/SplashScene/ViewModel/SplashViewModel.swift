@@ -18,6 +18,7 @@ class SplashViewModel: ViewModel {
     }
     
     func transform(input: Input) -> Output {
+        
         return Output()
     }
 }
