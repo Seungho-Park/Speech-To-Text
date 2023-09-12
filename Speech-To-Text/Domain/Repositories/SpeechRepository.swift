@@ -6,9 +6,9 @@
 //
 
 import Foundation
-
+import RxSwift
 
 protocol SpeechRepository {
     func fetchPermission()-> Bool
-    func fetchRecordHistories()-> [Record]
+    func fetchRecordHistories()-> Observable<[Record]>
 }

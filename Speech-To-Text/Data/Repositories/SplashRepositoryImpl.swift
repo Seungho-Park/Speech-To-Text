@@ -7,13 +7,13 @@
 
 import Foundation
 import Speech
-import CoreData
+import RxSwift
 
 class SpeechRepositoryImpl: SpeechRepository {
     private let speechService: SpeechService
-    private let storage: CoreDataStorage
+    private let storage: SpeechStorage
     
-    init(speechService: SpeechService, storage: CoreDataStorage = CoreDataStorage.shared) {
+    init(speechService: SpeechService, storage: SpeechStorage) {
         self.speechService = speechService
         self.storage = storage
     }
@@ -37,15 +37,19 @@ class SpeechRepositoryImpl: SpeechRepository {
         return SFSpeechRecognizer.authorizationStatus() == .authorized
     }
     
-    func fetchRecordHistories() -> [Record] {
-        //PerformBackgroundTask로? 그럼 Completion 넣어야되는데, 아님 Rx로?
-        //Storage클래스를 새로 만들어서 Repository가 호출
-        //Rx쓰자!
-        
-        let request: NSFetchRequest = SpeechEntity.fetchRequest()
-        let result = try! storage.persistentContainer.viewContext.fetch(request)
-        return result.map {
-            Record(title: $0.title!, contents: $0.contents ?? "", createDate: $0.createDate!, updateDate: $0.updateDate ?? $0.createDate!)
+    func fetchRecordHistories() -> Observable<[Record]> {
+        return Observable<[Record]>.create { [unowned self] observable in
+            self.storage.fetchRecords { result in
+                switch result {
+                case .success(let records):
+                    observable.onNext(records)
+                    observable.onCompleted()
+                case .failure(let error):
+                    observable.onError(error)
+                }
+            }
+            
+            return Disposables.create()
         }
     }
 }

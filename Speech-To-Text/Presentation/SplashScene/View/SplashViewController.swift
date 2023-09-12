@@ -12,9 +12,6 @@ class SplashViewController: BaseViewController<SplashViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let a = SplashUsecaseImpl(repository: SpeechRepositoryImpl(speechService: DefaultSpeechService(recognizer: DefaultSpeechRecognizer(config: SpeechConfig(locale: .current)))))
-        
-        a.fetchPermission()
     }
     
     override func bind() {

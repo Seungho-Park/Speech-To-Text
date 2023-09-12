@@ -48,6 +48,8 @@
 		D4F958C42AAFD56D00372D9E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F958C32AAFD56D00372D9E /* Log.swift */; };
 		D4F958C62AAFDB3000372D9E /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F958C52AAFDB3000372D9E /* Record.swift */; };
 		D4F958C82AAFDBDB00372D9E /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F958C72AAFDBDB00372D9E /* CoreDataStorage.swift */; };
+		D4F958CB2AAFF12200372D9E /* SpeechStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F958CA2AAFF12200372D9E /* SpeechStorage.swift */; };
+		D4F958CE2AAFF1FE00372D9E /* CoreDataSpeechStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F958CD2AAFF1FE00372D9E /* CoreDataSpeechStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		D4F958C32AAFD56D00372D9E /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		D4F958C52AAFDB3000372D9E /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		D4F958C72AAFDBDB00372D9E /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
+		D4F958CA2AAFF12200372D9E /* SpeechStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechStorage.swift; sourceTree = "<group>"; };
+		D4F958CD2AAFF1FE00372D9E /* CoreDataSpeechStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSpeechStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -400,8 +404,8 @@
 		D48027592AAD2B60008E3A9E /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				D46DFBF52AAB375D00595627 /* CoreDataStorage.xcdatamodeld */,
-				D4F958C72AAFDBDB00372D9E /* CoreDataStorage.swift */,
+				D4F958C92AAFF10D00372D9E /* CoreData */,
+				D4F958CC2AAFF1E800372D9E /* SpeechStorage */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -429,6 +433,24 @@
 				D4F958C32AAFD56D00372D9E /* Log.swift */,
 			);
 			path = Log;
+			sourceTree = "<group>";
+		};
+		D4F958C92AAFF10D00372D9E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D46DFBF52AAB375D00595627 /* CoreDataStorage.xcdatamodeld */,
+				D4F958C72AAFDBDB00372D9E /* CoreDataStorage.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		D4F958CC2AAFF1E800372D9E /* SpeechStorage */ = {
+			isa = PBXGroup;
+			children = (
+				D4F958CA2AAFF12200372D9E /* SpeechStorage.swift */,
+				D4F958CD2AAFF1FE00372D9E /* CoreDataSpeechStorage.swift */,
+			);
+			path = SpeechStorage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -571,6 +593,7 @@
 				D45021A82AAC97F700A3DAE4 /* AppCoordinator.swift in Sources */,
 				D48027482AAD1A92008E3A9E /* SplashUsecase.swift in Sources */,
 				D45021922AAB4D9700A3DAE4 /* SplashViewModel.swift in Sources */,
+				D4F958CB2AAFF12200372D9E /* SpeechStorage.swift in Sources */,
 				D480274E2AAD1C23008E3A9E /* ViewModelBindable.swift in Sources */,
 				D48027462AAD1928008E3A9E /* SplashRepositoryImpl.swift in Sources */,
 				D46DFBF72AAB375D00595627 /* CoreDataStorage.xcdatamodeld in Sources */,
@@ -590,6 +613,7 @@
 				D45021AE2AACBA5000A3DAE4 /* SpeechRecognizer.swift in Sources */,
 				D48027442AAD183A008E3A9E /* SpeechRepository.swift in Sources */,
 				D46DFBEF2AAB375D00595627 /* SceneDelegate.swift in Sources */,
+				D4F958CE2AAFF1FE00372D9E /* CoreDataSpeechStorage.swift in Sources */,
 				D45021A02AAC704500A3DAE4 /* SpeechService.swift in Sources */,
 				D45021AC2AACB4FB00A3DAE4 /* SpeechServiceError.swift in Sources */,
 				D45021B02AACEB8400A3DAE4 /* SpeechRequest.swift in Sources */,
